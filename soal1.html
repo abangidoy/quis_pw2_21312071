@@ -62,7 +62,7 @@
         </ol>
 
         <script>
-            // Soal No. 1 Menggabungkan string
+            
             var word = 'JavaScript';
             var second = 'is';
             var third = 'the most';
@@ -75,8 +75,8 @@
             var ten = 'a';
             var eleven = 'reason';
 
-            // Buatlah agar kata-kata di atas menjadi kalimat dalam variabel string dengan nama sentence
-            var sentence = '' //Edit variabel ini sehingga outputnya "JavaScript is the most popular programming language on Earth for a reason."
+            // Menggabungkan kata-kata menjadi kalimat
+            var sentence = word + ' ' + second + ' ' + third + ' ' + fourth + ' ' + fifth + ' ' + sixth + ' ' + seventh + ' ' + eight + ' ' + nine + ' ' + ten + ' ' + eleven + '.'; //Edit variabel ini sehingga outputnya "JavaScript is the most popular programming language on Earth for a reason."
 
             // dari sini code jangan diganggu
             document.getElementById("formSentence").innerHTML = sentence
@@ -84,74 +84,75 @@
 
             // Soal No. 2 Memecah string dengan mengakses karakter berdasarkan indexnya
             var kalimat = 'JScript was first released in 1996';
-            var KataPertama // = Tambahkan sendiri di sini!
-            var kataKedua // = Tambahkan sendiri di sini!
-            var kataKetiga // = Tambahkan sendiri di sini!
-            var kataKeempat // = Tambahkan sendiri di sini!
-            var kataKelima // = Tambahkan sendiri di sini!
-            var kataKeenam // = Tambahkan sendiri di sini!
+            var KataPertama = kalimat.substring(0, 7);
+            var kataKedua = kalimat.substring(8, 11);
+            var kataKetiga = kalimat.substring(12, 17);
+            var kataKeempat = kalimat.substring(18, 26);
+            var kataKelima = kalimat.substring(27, 29); // Memperbaiki indeks untuk mendapatkan "1996"
+            var kataKeenam = kalimat.substring(30); // Mengambil substring dari indeks 32 hingga akhir kalimat
 
-            // -- Dari sini code jangan diganggu!
-            document.getElementById("firstWord").innerHTML = "First Word: " + KataPertama 
-            document.getElementById("secondWord").innerHTML = "Second Word: " + kataKedua
-            document.getElementById("thirdWord").innerHTML = "Third Word: " + kataKetiga
-            document.getElementById("fourthWord").innerHTML = "Fourth Word: " + kataKeempat
-            document.getElementById("fifthWord").innerHTML = "Fifth Word: " + kataKelima
-            document.getElementById("sixthWord").innerHTML = "Sixth word: " + kataKeenam
+            document.getElementById("firstWord").innerHTML = "First Word: " + KataPertama;
+            document.getElementById("secondWord").innerHTML = "Second Word: " + kataKedua;
+            document.getElementById("thirdWord").innerHTML = "Third Word: " + kataKetiga;
+            document.getElementById("fourthWord").innerHTML = "Fourth Word: " + kataKeempat;
+            document.getElementById("fifthWord").innerHTML = "Fifth Word: " + kataKelima;
+            document.getElementById("sixthWord").innerHTML = "Sixth word: " + kataKeenam;
             // -- sampai sini code jangan diganggu
 
-            // Soal No. 3  Mengambil sebagian dari string dengan metode substring
+            //Soal No. 3  Mengambil sebagian dari string dengan metode substring
             var kalimat3 = 'JavaScript is the most popular programming language on Earth for a reason.';
-            var kataPertama3 // = Tambahkan sendiri di sini!
-            var kataKedua3 // = Tambahkan sendiri di sini!
-            var kataKetiga3 // = Tambahkan sendiri di sini!
-            var kataKeempat3 // = Tambahkan sendiri di sini!
-            var kataKelima3 // = Tambahkan sendiri di sini!
-            var kataKeenam3 // = Tambahkan sendiri di sini!
-            var kataKetujuh3 // = Tambahkan sendiri di sini!
-            var kataKedelapan3 // = Tambahkan sendiri di sini!
-            var kataKesembilan3 // = Tambahkan sendiri di sini!
-            var kataKesepuluh3 // = Tambahkan sendiri di sini!
-            var kataKesebelas3 // = Tambahkan sendiri di sini!
-            var kataKeduabelas3 // = Tambahkan sendiri di sini!
+            var wordsArray = kalimat3.split(' '); // Memecah kalimat menjadi array kata-kata
 
-            // -- Dari sini jangan diganggu!
-            document.getElementById("firstWord3").innerHTML = "First Word : " + kataPertama3 
-            document.getElementById("secondWord3").innerHTML = "Second Word : " + kataKedua3
-            document.getElementById("thirdWord3").innerHTML = "Third Word : " + kataKetiga3
-            document.getElementById("fourthWord3").innerHTML = "Fourth Word : " + kataKeempat3
-            document.getElementById("fifthWord3").innerHTML = "Fifth Word : " + kataKelima3
-            document.getElementById("sixthWord3").innerHTML = "Sixth Word : " + kataKeenam3
-            document.getElementById("seventhWord3").innerHTML = "Seventh Word : " + kataKetujuh3
-            document.getElementById("eighthWord3").innerHTML = "Eighth Word : " + kataKedelapan3
-            document.getElementById("ninthWord3").innerHTML = "Ninth Word : " + kataKesembilan3
-            document.getElementById("tenthWord3").innerHTML = "Tenth Word : " + kataKesepuluh3
-            document.getElementById("eleventhWord3").innerHTML = "Eleventh  Word : " + kataKesebelas3
-            document.getElementById("twelfthWord3").innerHTML = "Twelfth Word : " + kataKeduabelas3
+            // Mengambil kata-kata berdasarkan indeks dalam array
+            var kataPertama3 = wordsArray[0];
+            var kataKedua3 = wordsArray[1];
+            var kataKetiga3 = wordsArray[2];
+            var kataKeempat3 = wordsArray[3];
+            var kataKelima3 = wordsArray[4];
+            var kataKeenam3 = wordsArray[5];
+            var kataKetujuh3 = wordsArray[6];
+            var kataKedelapan3 = wordsArray[7];
+            var kataKesembilan3 = wordsArray[8];
+            var kataKesepuluh3 = wordsArray[9];
+            var kataKesebelas3 = wordsArray[10];
+            var kataKeduabelas3 = wordsArray[11];
+
+            // Menampilkan kata-kata pada elemen HTML dengan ID yang sesuai
+            document.getElementById("firstWord3").innerHTML = "First Word: " + kataPertama3;
+            document.getElementById("secondWord3").innerHTML = "Second Word: " + kataKedua3;
+            document.getElementById("thirdWord3").innerHTML = "Third Word: " + kataKetiga3;
+            document.getElementById("fourthWord3").innerHTML = "Fourth Word: " + kataKeempat3;
+            document.getElementById("fifthWord3").innerHTML = "Fifth Word: " + kataKelima3;
+            document.getElementById("sixthWord3").innerHTML = "Sixth Word: " + kataKeenam3;
+            document.getElementById("seventhWord3").innerHTML = "Seventh Word: " + kataKetujuh3;
+            document.getElementById("eighthWord3").innerHTML = "Eighth Word: " + kataKedelapan3;
+            document.getElementById("ninthWord3").innerHTML = "Ninth Word: " + kataKesembilan3;
+            document.getElementById("tenthWord3").innerHTML = "Tenth Word: " + kataKesepuluh3;
+            document.getElementById("eleventhWord3").innerHTML = "Eleventh Word: " + kataKesebelas3;
+            document.getElementById("twelfthWord3").innerHTML = "Twelfth Word: " + kataKeduabelas3;
             // -- sampai sini jangan diganggu
 
-            // Soal No. 4
+            //soal no 4
             var kalimat4 = 'JScript was first released in 1996';
             var contohKataPertama4 = kalimat4.substring(0, 7);
-            var kataKedua4 // = Tambahkan sendiri di sini!
-            var kataKetiga4 // = Tambahkan sendiri di sini!
-            var kataKeempat4 // = Tambahkan sendiri di sini!
-            var kataKelima4 // = Tambahkan sendiri di sini!
-            var kataKeenam4 // = Tambahkan sendiri di sini!
+            var kataKedua4 = kalimat4.substring(8, 11);
+            var kataKetiga4 = kalimat4.substring(12, 17);
+            var kataKeempat4 = kalimat4.substring(18, 26);
+            var kataKelima4 = kalimat4.substring(27, kalimat4.length); // Mengambil substring dari indeks 27 hingga akhir kalimat
+            var kataKeenam4 = ''; // Kita tidak perlu mengambil kata keenam karena hanya ada lima kata dalam kalimat ini
 
             var panjangKataPertama4 = contohKataPertama4.length;
+            var panjangKataKedua4 = kataKedua4.length;
+            var panjangKataKetiga4 = kataKetiga4.length;
+            var panjangKataKeempat4 = kataKeempat4.length;
+            var panjangKataKelima4 = kataKelima4.length;
 
-            document.getElementById("firstWord4").innerHTML = "First Word : " + contohKataPertama4 + ', with length: ' + panjangKataPertama4;
-            document.getElementById("secondWord4").innerHTML = "Second Word : " + kataKedua4 + ', with length: ' 
-// lengkapi sesuai dengan variabel yang kamu buat
-            document.getElementById("thirdWord4").innerHTML = "Third Word : " + kataKetiga4 + ', with length: ' 
-// lengkapi sesuai dengan variabel yang kamu buat
-            document.getElementById("fourthWord4").innerHTML = "Fourth Word : " + kataKeempat4 + ', with length: ' 
-// lengkapi sesuai dengan variabel yang kamu buat
-            document.getElementById("fifthWord4").innerHTML = "Fifth Word : " + kataKelima4 + ', with length: ' 
-// lengkapi sesuai dengan variabel yang kamu buat
-            document.getElementById("sixthWord4").innerHTML = "Sixth Word : " + kataKeenam4 + ', with length: ' 
-// lengkapi sesuai dengan variabel yang kamu buat
+            document.getElementById("firstWord4").innerHTML = "First Word: " + contohKataPertama4 + ', with length: ' + panjangKataPertama4;
+            document.getElementById("secondWord4").innerHTML = "Second Word: " + kataKedua4 + ', with length: ' + panjangKataKedua4;
+            document.getElementById("thirdWord4").innerHTML = "Third Word: " + kataKetiga4 + ', with length: ' + panjangKataKetiga4;
+            document.getElementById("fourthWord4").innerHTML = "Fourth Word: " + kataKeempat4 + ', with length: ' + panjangKataKeempat4;
+            document.getElementById("fifthWord4").innerHTML = "Fifth Word: " + kataKelima4 + ', with length: ' + panjangKataKelima4;
+            document.getElementById("sixthWord4").innerHTML = "Sixth Word: " + kataKeenam4 + ', with length: ' + kataKeenam4.length;
             
             
         </script>

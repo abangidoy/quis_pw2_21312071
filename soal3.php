@@ -11,27 +11,33 @@
 
     <?php 
        
-        echo "<h3>Soal No 2 Looping Array Modulo </h3>";
-        /* 
-            Soal No 7
-            Looping Array Module
-            Carilah sisa bagi dengan angka 5 dari setiap angka pada array berikut.
-            Tampung ke dalam array baru bernama $rest 
-        */
-
-        $numbers = [18, 45, 29, 61, 47, 34];
-        echo "array numbers: ";
-        print_r($numbers);
-        // Lakukan Looping di sini
-
-        // output nya nanti seperti ini --> [3, 0, 4, 1, 2, 4]
-
-        echo "<br>";
-        // tampilkan di sini
-        echo "Array sisa baginya adalah:  "; 
-        echo "<br>";
-
-        echo "<h3> Soal No 3 Looping Asociative Array </h3>";
+       echo "<h3>Soal No 2 Looping Array Modulo </h3>";
+       /* 
+           Soal No 7
+           Looping Array Module
+           Carilah sisa bagi dengan angka 5 dari setiap angka pada array berikut.
+           Tampung ke dalam array baru bernama $rest 
+       */
+       
+       $numbers = [18, 45, 29, 61, 47, 34];
+       echo "array numbers: ";
+       print_r($numbers);
+       
+       // Lakukan Looping di sini
+       $rest = [];
+       foreach ($numbers as $number) {
+           $modulus = $number % 5;
+           $rest[] = $modulus;
+       }
+       
+       // output nya nanti seperti ini --> [3, 0, 4, 1, 2, 4]
+       echo "<br>";
+       // tampilkan di sini
+       echo "Array sisa baginya adalah: ";
+       print_r($rest);
+       
+       echo "<br>";
+       echo "<h3> Soal No 3 Looping Associative Array </h3>";
         /* 
             Soal No 8
             Loop Associative Array
@@ -47,14 +53,25 @@
         */
 
                 /* variabel code jangan diubah */
-        $items = [
-            ['001', 'Keyboard Logitek', 60000, 'Keyboard yang mantap untuk kantoran', 'logitek.jpeg'], 
-            ['002', 'Keyboard MSI', 300000, 'Keyboard gaming MSI mekanik', 'msi.jpeg'],
-            ['003', 'Mouse Genius', 50000, 'Mouse Genius biar lebih pinter', 'genius.jpeg'],
-            ['004', 'Mouse Jerry', 30000, 'Mouse yang disukai kucing', 'jerry.jpeg']
-        ];
-        
-        // Output: 
+                $items = [
+                    ['001', 'Keyboard Logitek', 60000, 'Keyboard yang mantap untuk kantoran', 'logitek.jpeg'], 
+                    ['002', 'Keyboard MSI', 300000, 'Keyboard gaming MSI mekanik', 'msi.jpeg'],
+                    ['003', 'Mouse Genius', 50000, 'Mouse Genius biar lebih pinter', 'genius.jpeg'],
+                    ['004', 'Mouse Jerry', 30000, 'Mouse yang disukai kucing', 'jerry.jpeg']
+                ];
+                
+                // Output:
+                foreach ($items as $item) {
+                    $itemAssoc = [
+                        'id' => $item[0],
+                        'name' => $item[1],
+                        'price' => $item[2],
+                        'description' => $item[3],
+                        'source' => $item[4]
+                    ];
+                    print_r($itemAssoc);
+                    echo "<br>";
+                }
 
     ?>
 

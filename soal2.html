@@ -5,43 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Function</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            color: #555;
+        }
+
+        #jawaban5, #jawaban6 {
+            background-color: #f2f2f2;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #jawaban6 {
+            background-color: #e8f6ff;
+        }
+
+        /* Styling untuk elemen <div> dengan class "result" yang ada di dalam elemen dengan ID "jawaban6" */
+        #jawaban6 .result {
+            font-weight: bold;
+            color: #007bff;
+        }
+    </style>
 </head>
 <body>
     <h1>Fungsi</h1>
 
     <h3>Soal No.5</h3>
-    <div id="jawaban5">
-
-    </div>
+    <div id="jawaban5"></div>
 
     <h3>Soal No.6</h3>
-    <div id="jawaban6">
-
-    </div>
-
+    <div id="jawaban6"></div>
 
     <script>
+        function Welcome() {
+            return "Selamat datang di universitas teknokrat indonesia";
+        }
 
-        // Soal No. 5 Fungsi Welcome
-        /* 
-            Buatlah sebuah fungsi bernama Welcome(), yang mengembalikan nilai berupa "Selamat datang di universitas teknokrat indonesia", yang kemudian akan ditampilkan di 
-halaman html. Tampilkan di id jawaban5
-        */
+        // Memanggil fungsi Welcome() dan menampilkan nilai yang dikembalikan pada elemen dengan ID "jawaban5"
+        document.getElementById("jawaban5").innerHTML = Welcome();
 
-        // tulis kode dibawah ini
+        function looping(start, end) {
+            var result = "";
+            for (var i = start; i <= end; i++) {
+                result += i;
+                if (i < end) {
+                    result += ", ";
+                }
+            }
+            return result;
+        }
 
-        
-       
-        // Soal No. 6 Fungsi Looping
-        /* 
-            Buatlah sebuah fungsi bernama lopping(), yang mengembalikan nilai hasil looping dari dua parameter yang dikirim.
-            contoh: looping(3, 7), maka akan tampil : 3,4,5,6,7
-        */
-
-        // tulis kode di sini 
-
+        // Memanggil fungsi looping(3, 7) dan menampilkan nilai yang dikembalikan pada elemen dengan ID "jawaban6"
+        document.getElementById("jawaban6").innerHTML = '<div class="result">' + looping(3, 7) + '</div>';
     </script>
 </body>
-
-
 </html>
